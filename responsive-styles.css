@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"); 
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root {
+  --card-with: 250px;
+  --general-padding: 2em;
+  --primary-color: #0891b2;
+  --card-bg: #4ba2d2;
+  --header-font: "Playfair Display", serif;
+  --text-font: "Roboto", sans-serif;
+  --icon-width: 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
+}
+
+#header {
+  width: 100%;
+  padding: var(--general-padding);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+
+#header .name {
+  font-family: var(--header-font);
+  font-size: 3em;
+  position: absolute;
+  font-weight: 300;
+  left: 140px;
+  letter-spacing: 1px;
+  padding: 10px;
+  bottom: 40px;
+  color: white;
+  text-shadow: #000 3px 3px 10px;
+}
+
+#header img {
+  width: 90%;
+  height: 90vh;
+}
+
+#header .about {
+  background-color: white;
+ height: 50%;
+  height: 80%; 
+  padding: 1em;
+  position: relative;
+}
+
+.about .about-header {
+    font-size: 2em;
+    font-family: var(--header-font);
+    font-weight: 300;
+}
+
+.about p {
+    margin: 1.5em 0;
+    text-wrap: wr;
+}
+
+.about img {
+    display: none;
+}
+
+.about .lis {
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    bottom: 1em;
+    right: 1em;
+}
+
+.lis li svg {
+    width: var(--icon-width);
+    height: auto;
+}
+
+/* main container */
+
+#container {
+    min-height: 100vh;
+    background-color: white;
+    padding: var(--general-padding);
+    margin-bottom: 12em;
+}
+
+#container .cards-header {
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+#container .cards {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    height: fit-content;
+}
+
+.cards .card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 10px #00000065;
+    width: 250px;
+    height: auto;
+}
+
+.cards .project-view {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    font-family: var(--header-font);
+    background-color: #c7c3c3;
+}
+
+.cards .project-name {
+    font-family: var(--header-font);
+    font-weight: 300;
+    padding-left: 40px;
+}
+
+.cards .description {
+    padding-left: 40px;
+}
+
+.cards .card-lis{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 1em;
+    padding: 1em;
+}
+
+/* footer styles */
+#footer {
+    width: 100%;
+    height: 100vh;
+    padding: var(--general-padding);
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    position: static;
+    bottom: 0;
+    background-color: #0891b2;
+}
+
+#footer .contact-side {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-side h2 {
+    font-family: var(--header-font);
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.contact-side a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-side p {
+    color: rgb(255, 255, 255);
+    width: 50ch;
+    font-size: 1em;
+}
+
+.contact-side a svg {
+    width: var(--icon-width);
+    fill: white;
+}
+
+#footer .for-img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.for-img img {
+  width: 100%;
+  height: 95vh;
+}
+
+.contact-side .lis {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+.contact-side a {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.contact-side .lis a svg {
+   fill: black;
+}
+
+/* media queries
+ */
+
+ @media (min-width: 600px) and (max-width: 1200px) {
+    #header .name, #header .about{
+        position: absolute;
+    }
+
+    #header img.hero {
+        display: none;
+    }
+
+    #header .about {
+        top: 100px;
+    }
+
+    #header .about .about-header {
+        float: right;
+        margin-right: 50px;
+    }
+
+    #header  .about img {
+        display: block;
+        float: left;
+        width: 300px;
+        height: 300px;
+        margin: 1em;
+        background-color: transparent;
+        margin-top: -80px;
+        margin-left: -30px;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    #header .name {
+        width: auto;
+        z-index: 9999;
+        top: 30px;
+        left: 250px;
+    }
+
+    #footer {
+        width: 100%;
+    }
+
+    .for-img img {
+        display: none;
+    }
+ }
+
+
+ /* for mobile */
+ @media (min-width: 300px) and (max-width: 599px) {
+    #header, #footer {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    #header {
+        top: -200px;
+        min-height: 100vh;
+        padding: 0;
+        z-index: 9999;
+    }
+
+    .about-header, .cards-header {
+        text-align: center;
+    }
+
+    #header .name{
+        font-size: 4em;
+        text-align: center;
+        top: 350px;
+        z-index: 9999;
+        max-width: 100px;
+        margin-left: -100px;
+    }
+
+    #header .hero {
+        height: 100%;
+        margin-top: 30px;
+    }
+
+    .about .lis {
+       margin-top: 30px;
+
+    }
+
+    .about {
+        background-color: white;
+        width: 100%;
+        padding: 0;
+    }
+
+    .about p {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cards .card{
+        width: 100%;
+    }
+
+    #container {
+        margin-bottom: 0;
+    }
+
+    #header .name {
+        position: relative;
+        padding: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    #footer .for-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #footer {
+        height: fit-content;
+    }
+
+    #footer > section.contact-side > p:nth-child(3){
+       width: auto;
+    }
+
+    #footer > section.contact-side > p:nth-child(2) {
+        width: auto;
+    }
+ }
